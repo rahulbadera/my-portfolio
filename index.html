@@ -1255,144 +1255,75 @@
 
         // HERO ANIMATIONS
         const tl = gsap.timeline();
-
-        tl.from(".hero-content .role", {
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            ease: "power3.out"
-        })
-            .from(".hero-content h1", {
-                y: 30,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            }, "-=0.6")
-            .from(".hero-content p", {
-                y: 30,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            }, "-=0.6")
-            .from(".hero-btns", {
-                y: 20,
-                opacity: 0,
-                duration: 0.6,
-                ease: "power3.out"
-            }, "-=0.4")
-            .from(".hero-image", {
-                x: 30,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            }, "-=1");
+        tl.from(".hero-content .role", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" })
+            .from(".hero-content h1", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-content p", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-btns", { y: 20, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
+            .from(".hero-image", { x: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=1");
 
         // SCROLL REVEAL ANIMATIONS
-
-        // General Fade Up
         gsap.utils.toArray('.gs-reveal').forEach(element => {
             gsap.from(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            });
-        });
-
-        // Left Reveal
-        gsap.utils.toArray('.gs-reveal-left').forEach(element => {
-            gsap.from(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 80%",
-                },
-                x: -50,
-                opacity: 0,
-                duration: 1
-            });
-        });
-
-        // Right Reveal
-        gsap.utils.toArray('.gs-reveal-right').forEach(element => {
-            gsap.from(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 80%",
-                },
-                x: 50,
-                opacity: 0,
-                duration: 1
+                scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none reverse" },
+                y: 50, opacity: 0, duration: 1, ease: "power3.out"
             });
         });
 
         // Staggered Skills
         gsap.from(".skill-item", {
-            scrollTrigger: {
-                trigger: ".skills-grid",
-                start: "top 85%"
-            },
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "back.out(1.7)"
+            scrollTrigger: { trigger: ".skills-grid", start: "top 85%" },
+            y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: "back.out(1.7)"
         });
 
-        // Services & Pricing Cards Stagger
-        const staggerCards = gsap.utils.toArray('.gs-reveal-up, .gs-stagger-card');
-        staggerCards.forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
-        });
-
-        // Number Counter Animation
+        // Stats Counter
         const stats = document.querySelectorAll('.stat-number');
         stats.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-count'));
             gsap.to(stat, {
-                scrollTrigger: {
-                    trigger: stat,
-                    start: "top 85%"
-                },
-                innerHTML: target,
-                duration: 2,
-                snap: { innerHTML: 1 },
-                onUpdate: function () {
-                    this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerHTML) + (target > 20 ? "+" : "+");
-                }
+                scrollTrigger: { trigger: stat, start: "top 85%" },
+                innerHTML: target, duration: 2, snap: { innerHTML: 1 },
+                onUpdate: function () { this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerHTML) + "+"; }
             });
         });
 
-        // Form Handling (Visual Only)
-        document.getElementById('leadForm').addEventListener('submit', function (e) {
-            e.preventDefault();
+        // 🔥 FIXED FORM HANDLING (AJAX Submission to Formspree)
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Stop page reload
             const btn = this.querySelector('button');
             const originalText = btn.innerHTML;
+            const formData = new FormData(this);
 
+            // Change button to loading state
+            btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-            setTimeout(() => {
-                btn.style.backgroundColor = 'var(--success)';
-                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                this.reset();
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    // Success State
+                    btn.style.backgroundColor = '#28a745';
+                    btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    this.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                // Error State
+                btn.style.backgroundColor = '#dc3545';
+                btn.innerHTML = 'Error! Try Again';
+            } finally {
+                // Reset button after 3 seconds
                 setTimeout(() => {
+                    btn.disabled = false;
                     btn.style.backgroundColor = '';
                     btn.innerHTML = originalText;
                 }, 3000);
-            }, 1500);
+            }
         });
     </script>
 </body>
