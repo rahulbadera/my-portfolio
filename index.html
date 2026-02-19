@@ -28,7 +28,6 @@
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -455,7 +454,7 @@
 
         .hero-image img {
             border-radius: 20px;
-            box-shadow: 20px 20px 0px var(--accent);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
             max-width: 400px;
             width: 100%;
             z-index: 2;
@@ -623,7 +622,7 @@
         .pricing-card.featured {
             border-color: var(--accent);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
-            transform: scale(1.05);
+            transform: scale(1.03);
             z-index: 2;
         }
 
@@ -830,6 +829,47 @@
             .pricing-card.featured {
                 transform: scale(1);
             }
+
+
+        }
+
+        /* ===== WhatsApp Floating Button ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
     </style>
 </head>
@@ -868,643 +908,646 @@
         </div>
     </div>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <span class="role fade-in-up">Performance Marketing Specialist</span>
-                    <h1 class="fade-in-up">Scale Your Business with ROI-Driven Ad Campaigns</h1>
-                    <p class="fade-in-up">Expert in Google Ads & Meta Ads. I help local businesses and startups generate
-                        high-quality leads and maximize revenue.</p>
-                    <div class="hero-btns fade-in-up">
-                        <a href="tel:+917339849902" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call
-                            Now</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="role fade-in-up">Performance Marketing Specialist</span>
+                <h1 class="fade-in-up">Scale Your Business with ROI-Driven Ad Campaigns</h1>
+                <p class="fade-in-up">Expert in Google Ads & Meta Ads. I help local businesses and startups generate
+                    high-quality leads and maximize revenue.</p>
+                <div class="hero-btns fade-in-up">
+                    <a href="tel:+917339849902" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call
+                        Now</a>
+                    <a href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20your%20Performance%20Marketing%20services.%20Can%20we%20discuss?"
+                        class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in-up">
+                <!-- Using a professional abstract placeholder for the profile image -->
+                <img src="images/rahul-badera.png" alt="Rahul Badera – Website Developer">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title gs-reveal">About Me</h2>
+                <p class="section-subtitle gs-reveal">Passionate about numbers, data, and growth.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text gs-reveal-left">
+                    <h3>Hi, I'm Rahul Badera.</h3>
+                    <br>
+                    <p>I am a dedicated Performance Marketing Specialist focused on helping businesses grow through
+                        strategic paid advertising. Unlike generalist marketers, I specialize specifically in the
+                        two
+                        most powerful platforms: <strong>Google Ads</strong> and <strong>Meta (Facebook/Instagram)
+                            Ads</strong>.</p>
+                    <p>My approach is simple: I don't just run ads; I build funnels that convert. Whether you need
+                        immediate leads via Search ads or brand awareness via Instagram, I tailor the strategy to
+                        your
+                        specific ROI goals.</p>
+                    <a href="#contact" class="btn btn-outline">Let's Discuss Strategy</a>
+                </div>
+                <div class="stat-grid gs-reveal-right">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">Campaigns Managed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Cr+ Ad Spend</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-white py-20 px-6 font-sans">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 gs-reveal">My Expertise</h2>
+                <p class="text-gray-600 text-lg gs-reveal border-b-2 border-blue-500 w-fit mx-auto pb-2">Tools and
+                    platforms I use to drive results.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i class="fab fa-google text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Google Ads</div>
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i
+                        class="fab fa-facebook text-4xl text-blue-600 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Facebook Ads</div>
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i
+                        class="fab fa-instagram text-4xl text-pink-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Instagram Ads</div>
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i
+                        class="fas fa-chart-line text-4xl text-orange-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Analytics</div>
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i class="fas fa-tag text-4xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">GTM</div>
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                    <i
+                        class="fas fa-file-invoice-dollar text-4xl text-green-600 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">ROI Opt.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title gs-reveal">Services</h2>
+                <p class="section-subtitle gs-reveal">Specialized advertising solutions for your business.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Google Ads -->
+                <div class="service-card gs-reveal-up">
+                    <div class="service-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google Ads Services</h3>
+                    <p>Capture customers exactly when they are searching for your services.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Search Network (PPC)</li>
+                        <li><i class="fas fa-check-circle"></i> Display Remarketing</li>
+                        <li><i class="fas fa-check-circle"></i> YouTube Video Ads</li>
+                        <li><i class="fas fa-check-circle"></i> Keyword Research & Audits</li>
+                    </ul>
+                </div>
+
+                <!-- Meta Ads -->
+                <div class="service-card gs-reveal-up">
+                    <div class="service-icon"><i class="fab fa-meta"></i></div>
+                    <h3>Meta Ads Services</h3>
+                    <p>Target specific audiences and generate leads on Facebook & Instagram.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Lead Generation Forms</li>
+                        <li><i class="fas fa-check-circle"></i> Carousel & Video Ads</li>
+                        <li><i class="fas fa-check-circle"></i> Audience Retargeting</li>
+                        <li><i class="fas fa-check-circle"></i> Creative A/B Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Promo Section (NEW) -->
+    <section id="web-dev" class="section-padding promo-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="promo-badge gs-reveal">Limited Time Offer</span>
+                <h2 class="section-title gs-reveal" style="color:white; margin-bottom: 0.5rem;">Website Development
+                </h2>
+                <p class="section-subtitle gs-reveal" style="color:#cbd5e1;">Premium futuristic designs that convert
+                    visitors into customers.</p>
+            </div>
+
+            <div class="web-grid">
+                <!-- Basic Plan -->
+                <div class="web-card gs-reveal-left">
+                    <div style="font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 20px;"><i
+                            class="fas fa-laptop-code"></i></div>
+                    <h3>Basic Website</h3>
+                    <div class="web-price">₹2,000</div>
+                    <ul class="web-features">
+                        <li><i class="fas fa-check"></i> Clean & Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Mobile-Friendly Layout</li>
+                        <li><i class="fas fa-check"></i> Fast Loading Speed</li>
+                        <li><i class="fas fa-check"></i> Ideal for Small Businesses</li>
+                        <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-neon">Book Basic</a>
+                </div>
+
+                <!-- GSAP Premium Plan -->
+                <div class="web-card premium gs-reveal-right">
+                    <div style="font-size: 2.5rem; color: var(--neon-purple); margin-bottom: 20px;"><i
+                            class="fas fa-magic"></i></div>
+                    <h3>GSAP Animated</h3>
+                    <div class="web-price">₹5,000</div>
+                    <ul class="web-features">
+                        <li><i class="fas fa-check"></i> <strong>Modern UI/UX Design</strong></li>
+                        <li><i class="fas fa-check"></i> Smooth GSAP Animations</li>
+                        <li><i class="fas fa-check"></i> Interactive Sections</li>
+                        <li><i class="fas fa-check"></i> Premium Professional Look</li>
+                        <li><i class="fas fa-check"></i> Fully Responsive (All Devices)</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-neon-purple">Book Premium</a>
+                </div>
+            </div>
+
+            <!-- Free Marketing Offer -->
+            <div class="offer-banner gs-reveal-up">
+                <h4><i class="fas fa-gift"></i> FREE Digital Marketing Included</h4>
+                <div class="offer-icons">
+                    <i class="fab fa-google"></i>
+                    <i class="fas fa-plus" style="font-size: 1rem; align-self:center; color:#fff;"></i>
+                    <i class="fab fa-meta"></i>
+                </div>
+                <p style="font-size: 1.2rem; color: #fff; max-width: 700px; margin: 0 auto;">
+                    Book any website development package today and get complete <strong>Google Ads & Meta Ads
+                        campaign
+                        setup for FREE</strong>.
+                </p>
+                <div class="offer-note">
+                    * You only pay the advertising budget directly to Google/Meta. Our setup & management fee is
+                    WAIVED.
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="tel:+917339849902" class="btn btn-primary">Call Now to Claim Offer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title gs-reveal">Marketing Retainers</h2>
+                <p class="section-subtitle gs-reveal">Monthly plans for continuous ad management (without website).
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card gs-stagger-card">
+                    <h3>Starter Plan</h3>
+                    <div class="price">₹5,000<span>/mo</span></div>
+                    <p>Best for local businesses starting out.</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 1 Platform (Google OR Meta)</li>
+                        <li><i class="fas fa-check"></i> Basic Campaign Setup</li>
+                        <li><i class="fas fa-check"></i> Monthly Performance Report</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width:100%">Choose Starter</a>
+                </div>
+
+                <!-- Growth -->
+                <div class="pricing-card featured gs-stagger-card">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Growth Plan</h3>
+                    <div class="price">₹10,000<span>/mo</span></div>
+                    <p>For businesses ready to scale up.</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> <strong>Google + Meta Ads</strong></li>
+                        <li><i class="fas fa-check"></i> Advanced Audience Targeting</li>
+                        <li><i class="fas fa-check"></i> Weekly Optimization</li>
+                        <li><i class="fas fa-check"></i> Conversion Tracking Setup</li>
+                        <li><i class="fas fa-check"></i> Priority WhatsApp Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%">Choose Growth</a>
+                </div>
+
+                <!-- Premium -->
+                <div class="pricing-card gs-stagger-card">
+                    <h3>Premium Plan</h3>
+                    <div class="price">₹15,000+<span>/mo</span></div>
+                    <p>Full-funnel strategy for high spenders.</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> All Platforms Included</li>
+                        <li><i class="fas fa-check"></i> Landing Page Consultation</li>
+                        <li><i class="fas fa-check"></i> Creative Strategy</li>
+                        <li><i class="fas fa-check"></i> Daily Monitoring</li>
+                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width:100%">Contact Me</a>
+                </div>
+            </div>
+            <div class="text-center pricing-note">
+                * Note: The pricing mentioned above is the service fee. Ad budget is separate and paid directly to
+                Google/Meta.
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title gs-reveal">Why Choose Me?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item gs-reveal-up">
+                    <div class="why-icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                        <h4>ROI Focused</h4>
+                        <p class="text-secondary">I don't care about vanity metrics like likes. I care about leads
+                            and
+                            sales.</p>
+                    </div>
+                </div>
+                <div class="why-item gs-reveal-up">
+                    <div class="why-icon"><i class="fas fa-search-dollar"></i></div>
+                    <div>
+                        <h4>Transparent Reporting</h4>
+                        <p class="text-secondary">You get clear reports. You'll always know where your money is
+                            going.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-item gs-reveal-up">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <div>
+                        <h4>Direct Communication</h4>
+                        <p class="text-secondary">No account managers. You work directly with me for the best
+                            results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title gs-reveal">Get In Touch</h2>
+                <p class="section-subtitle gs-reveal">Ready to grow your business? Let's have a chat.</p>
+            </div>
+            <div class="contact-container gs-reveal-up">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h5>Call Me</h5>
+                            <p>+91 7339849902</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h5>Email Me</h5>
+                            <p>baderarahul59@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h5>WhatsApp</h5>
+                            <p>+91 7339849902</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;">
                         <a href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20your%20Performance%20Marketing%20services.%20Can%20we%20discuss?"
-                            class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+                            Get a Free Consultation
+                        </a>
                     </div>
                 </div>
-                <div class="hero-image fade-in-up">
-                    <!-- Using a professional abstract placeholder for the profile image -->
-                    <img src="images/rahul-badera.png" alt="Rahul Badera – Website Developer">
 
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/mzdvnkeo" method="POST" id="leadForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <select name="interest" class="form-control" required>
+                                <option value="" disabled selected>Interested In</option>
+                                <option value="Google Ads">Google Ads</option>
+                                <option value="Meta Ads">Meta Ads</option>
+                                <option value="Website Development">Website Development</option>
+                                <option value="Landing Page Design">Landing Page Design</option>
+                                <option value="Ads + Website">Both (Ads + Website)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="4"
+                                placeholder="Message / Business Details"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <section class="bg-white py-16 px-6 font-sans">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
-        <!-- About Section -->
-        <section id="about" class="section-padding bg-white">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title gs-reveal">About Me</h2>
-                    <p class="section-subtitle gs-reveal">Passionate about numbers, data, and growth.</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text gs-reveal-left">
-                        <h3>Hi, I'm Rahul Badera.</h3>
-                        <br>
-                        <p>I am a dedicated Performance Marketing Specialist focused on helping businesses grow through
-                            strategic paid advertising. Unlike generalist marketers, I specialize specifically in the
-                            two
-                            most powerful platforms: <strong>Google Ads</strong> and <strong>Meta (Facebook/Instagram)
-                                Ads</strong>.</p>
-                        <p>My approach is simple: I don't just run ads; I build funnels that convert. Whether you need
-                            immediate leads via Search ads or brand awareness via Instagram, I tailor the strategy to
-                            your
-                            specific ROI goals.</p>
-                        <a href="#contact" class="btn btn-outline">Let's Discuss Strategy</a>
-                    </div>
-                    <div class="stat-grid gs-reveal-right">
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="5">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="150">0</span>
-                            <span class="stat-label">Campaigns Managed</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="50">0</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="10">0</span>
-                            <span class="stat-label">Cr+ Ad Spend</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="md:w-1/2">
+                <img src="images/ds image.jpg" alt="Data Science Learning"
+                    class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500 w-full h-auto block"
+                    style="min-height: 250px; object-fit: cover;">
             </div>
-        </section>
 
-        <!-- Skills Section -->
-        <section class="bg-white py-20 px-6 font-sans">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4 gs-reveal">My Expertise</h2>
-                    <p class="text-gray-600 text-lg gs-reveal border-b-2 border-blue-500 w-fit mx-auto pb-2">Tools and
-                        platforms I use to drive results.</p>
-                </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-blue-600 pl-4">Learning Data
+                    Science
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    I am currently diving deep into the world of <b>Data Science</b>. I am learning how to transform
+                    raw
+                    data into meaningful insights using Statistics, Machine Learning, and Big Data tools to help
+                    businesses make smarter decisions.
+                </p>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fab fa-google text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Google Ads</div>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center">
+                        <i class="devicon-python-plain colored text-5xl"></i>
+                        <span class="text-xs font-bold mt-2">Python</span>
                     </div>
-
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fab fa-facebook text-4xl text-blue-600 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Facebook Ads</div>
+                    <div class="flex flex-col items-center">
+                        <i class="devicon-pandas-plain colored text-5xl"></i>
+                        <span class="text-xs font-bold mt-2">Pandas</span>
                     </div>
-
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fab fa-instagram text-4xl text-pink-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Instagram Ads</div>
+                    <div class="flex flex-col items-center">
+                        <i class="devicon-numpy-original colored text-5xl"></i>
+                        <span class="text-xs font-2 mt-2">NumPy</span>
                     </div>
-
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fas fa-chart-line text-4xl text-orange-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Analytics</div>
+                    <div class="flex flex-col items-center">
+                        <i class="devicon-jupyter-plain colored text-5xl"></i>
+                        <span class="text-xs font-bold mt-2">Jupyter</span>
                     </div>
-
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fas fa-tag text-4xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">GTM</div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-brain text-5xl text-purple-600"></i>
+                        <span class="text-xs font-bold mt-2">AI/ML</span>
                     </div>
-
-                    <div
-                        class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
-                        <i
-                            class="fas fa-file-invoice-dollar text-4xl text-green-600 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">ROI Opt.</div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-chart-bar text-5xl text-blue-500"></i>
+                        <span class="text-xs font-bold mt-2">Viz</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="section-padding bg-white">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title gs-reveal">Services</h2>
-                    <p class="section-subtitle gs-reveal">Specialized advertising solutions for your business.</p>
+    <section class="bg-gray-900 text-white py-16 px-6 font-sans">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-blue-500 w-fit mx-auto pb-2">Technical
+                Skills & Expertise</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400 flex items-center">
+                        <i class="fas fa-ad mr-2"></i> Advertising Platforms
+                    </h3>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex flex-col items-center"><i
+                                class="fab fa-google text-4xl text-blue-500"></i><span class="text-xs mt-1">Google
+                                Ads</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="fab fa-facebook text-4xl text-blue-600"></i><span class="text-xs mt-1">Meta
+                                Ads</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="fab fa-instagram text-4xl text-pink-500"></i><span
+                                class="text-xs mt-1">Instagram</span></div>
+                    </div>
                 </div>
-                <div class="services-grid">
-                    <!-- Google Ads -->
-                    <div class="service-card gs-reveal-up">
-                        <div class="service-icon"><i class="fab fa-google"></i></div>
-                        <h3>Google Ads Services</h3>
-                        <p>Capture customers exactly when they are searching for your services.</p>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check-circle"></i> Search Network (PPC)</li>
-                            <li><i class="fas fa-check-circle"></i> Display Remarketing</li>
-                            <li><i class="fas fa-check-circle"></i> YouTube Video Ads</li>
-                            <li><i class="fas fa-check-circle"></i> Keyword Research & Audits</li>
-                        </ul>
-                    </div>
 
-                    <!-- Meta Ads -->
-                    <div class="service-card gs-reveal-up">
-                        <div class="service-icon"><i class="fab fa-meta"></i></div>
-                        <h3>Meta Ads Services</h3>
-                        <p>Target specific audiences and generate leads on Facebook & Instagram.</p>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check-circle"></i> Lead Generation Forms</li>
-                            <li><i class="fas fa-check-circle"></i> Carousel & Video Ads</li>
-                            <li><i class="fas fa-check-circle"></i> Audience Retargeting</li>
-                            <li><i class="fas fa-check-circle"></i> Creative A/B Testing</li>
-                        </ul>
+                <div
+                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center">
+                        <i class="fas fa-code mr-2"></i> Web & Backend
+                    </h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="flex flex-col items-center"><i
+                                class="devicon-html5-plain colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">HTML5</span></div>
+                        <div class="flex flex-col items-center"><i class="devicon-css3-plain colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">CSS3</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="devicon-react-original colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">React</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="devicon-python-plain colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">Python</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="devicon-nodejs-plain colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">Node.js</span></div>
+                        <div class="flex flex-col items-center"><i
+                                class="devicon-mongodb-plain colored text-3xl"></i><span
+                                class="text-[10px] mt-1 text-gray-400">MongoDB</span></div>
                     </div>
+                </div>
+
+                <div
+                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-yellow-400 flex items-center">
+                        <i class="fas fa-chart-line mr-2"></i> Analytics & SEO
+                    </h3>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Analytics (GA4)</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Search Console</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Conversion Tracking</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Rahul<span class="text-accent">.Ads</span></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- Web Development Promo Section (NEW) -->
-        <section id="web-dev" class="section-padding promo-section">
-            <div class="container">
-                <div class="text-center">
-                    <span class="promo-badge gs-reveal">Limited Time Offer</span>
-                    <h2 class="section-title gs-reveal" style="color:white; margin-bottom: 0.5rem;">Website Development
-                    </h2>
-                    <p class="section-subtitle gs-reveal" style="color:#cbd5e1;">Premium futuristic designs that convert
-                        visitors into customers.</p>
-                </div>
-
-                <div class="web-grid">
-                    <!-- Basic Plan -->
-                    <div class="web-card gs-reveal-left">
-                        <div style="font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 20px;"><i
-                                class="fas fa-laptop-code"></i></div>
-                        <h3>Basic Website</h3>
-                        <div class="web-price">₹2,000</div>
-                        <ul class="web-features">
-                            <li><i class="fas fa-check"></i> Clean & Responsive Design</li>
-                            <li><i class="fas fa-check"></i> Mobile-Friendly Layout</li>
-                            <li><i class="fas fa-check"></i> Fast Loading Speed</li>
-                            <li><i class="fas fa-check"></i> Ideal for Small Businesses</li>
-                            <li><i class="fas fa-check"></i> Contact Form Integration</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-neon">Book Basic</a>
-                    </div>
-
-                    <!-- GSAP Premium Plan -->
-                    <div class="web-card premium gs-reveal-right">
-                        <div style="font-size: 2.5rem; color: var(--neon-purple); margin-bottom: 20px;"><i
-                                class="fas fa-magic"></i></div>
-                        <h3>GSAP Animated</h3>
-                        <div class="web-price">₹5,000</div>
-                        <ul class="web-features">
-                            <li><i class="fas fa-check"></i> <strong>Modern UI/UX Design</strong></li>
-                            <li><i class="fas fa-check"></i> Smooth GSAP Animations</li>
-                            <li><i class="fas fa-check"></i> Interactive Sections</li>
-                            <li><i class="fas fa-check"></i> Premium Professional Look</li>
-                            <li><i class="fas fa-check"></i> Fully Responsive (All Devices)</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-neon-purple">Book Premium</a>
-                    </div>
-                </div>
-
-                <!-- Free Marketing Offer -->
-                <div class="offer-banner gs-reveal-up">
-                    <h4><i class="fas fa-gift"></i> FREE Digital Marketing Included</h4>
-                    <div class="offer-icons">
-                        <i class="fab fa-google"></i>
-                        <i class="fas fa-plus" style="font-size: 1rem; align-self:center; color:#fff;"></i>
-                        <i class="fab fa-meta"></i>
-                    </div>
-                    <p style="font-size: 1.2rem; color: #fff; max-width: 700px; margin: 0 auto;">
-                        Book any website development package today and get complete <strong>Google Ads & Meta Ads
-                            campaign
-                            setup for FREE</strong>.
-                    </p>
-                    <div class="offer-note">
-                        * You only pay the advertising budget directly to Google/Meta. Our setup & management fee is
-                        WAIVED.
-                    </div>
-                    <div style="margin-top: 30px;">
-                        <a href="tel:+917339849902" class="btn btn-primary">Call Now to Claim Offer</a>
-                    </div>
-                </div>
+            <div class="copyright">
+                &copy; 2026 Rahul Badera. All Rights Reserved.
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="section-padding">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title gs-reveal">Marketing Retainers</h2>
-                    <p class="section-subtitle gs-reveal">Monthly plans for continuous ad management (without website).
-                    </p>
-                </div>
-                <div class="pricing-grid">
-                    <!-- Starter -->
-                    <div class="pricing-card gs-stagger-card">
-                        <h3>Starter Plan</h3>
-                        <div class="price">₹5,000<span>/mo</span></div>
-                        <p>Best for local businesses starting out.</p>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> 1 Platform (Google OR Meta)</li>
-                            <li><i class="fas fa-check"></i> Basic Campaign Setup</li>
-                            <li><i class="fas fa-check"></i> Monthly Performance Report</li>
-                            <li><i class="fas fa-check"></i> Email Support</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline" style="width:100%">Choose Starter</a>
-                    </div>
+    <!-- Scripts -->
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
 
-                    <!-- Growth -->
-                    <div class="pricing-card featured gs-stagger-card">
-                        <div class="pricing-badge">Most Popular</div>
-                        <h3>Growth Plan</h3>
-                        <div class="price">₹10,000<span>/mo</span></div>
-                        <p>For businesses ready to scale up.</p>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> <strong>Google + Meta Ads</strong></li>
-                            <li><i class="fas fa-check"></i> Advanced Audience Targeting</li>
-                            <li><i class="fas fa-check"></i> Weekly Optimization</li>
-                            <li><i class="fas fa-check"></i> Conversion Tracking Setup</li>
-                            <li><i class="fas fa-check"></i> Priority WhatsApp Support</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary" style="width:100%">Choose Growth</a>
-                    </div>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
 
-                    <!-- Premium -->
-                    <div class="pricing-card gs-stagger-card">
-                        <h3>Premium Plan</h3>
-                        <div class="price">₹15,000+<span>/mo</span></div>
-                        <p>Full-funnel strategy for high spenders.</p>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> All Platforms Included</li>
-                            <li><i class="fas fa-check"></i> Landing Page Consultation</li>
-                            <li><i class="fas fa-check"></i> Creative Strategy</li>
-                            <li><i class="fas fa-check"></i> Daily Monitoring</li>
-                            <li><i class="fas fa-check"></i> 24/7 Support</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline" style="width:100%">Contact Me</a>
-                    </div>
-                </div>
-                <div class="text-center pricing-note">
-                    * Note: The pricing mentioned above is the service fee. Ad budget is separate and paid directly to
-                    Google/Meta.
-                </div>
-            </div>
-        </section>
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
 
-        <!-- Why Choose Me -->
-        <section class="section-padding bg-white">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title gs-reveal">Why Choose Me?</h2>
-                </div>
-                <div class="why-grid">
-                    <div class="why-item gs-reveal-up">
-                        <div class="why-icon"><i class="fas fa-bullseye"></i></div>
-                        <div>
-                            <h4>ROI Focused</h4>
-                            <p class="text-secondary">I don't care about vanity metrics like likes. I care about leads
-                                and
-                                sales.</p>
-                        </div>
-                    </div>
-                    <div class="why-item gs-reveal-up">
-                        <div class="why-icon"><i class="fas fa-search-dollar"></i></div>
-                        <div>
-                            <h4>Transparent Reporting</h4>
-                            <p class="text-secondary">You get clear reports. You'll always know where your money is
-                                going.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="why-item gs-reveal-up">
-                        <div class="why-icon"><i class="fas fa-headset"></i></div>
-                        <div>
-                            <h4>Direct Communication</h4>
-                            <p class="text-secondary">No account managers. You work directly with me for the best
-                                results.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
 
-        <!-- Contact Section -->
-        <section id="contact" class="section-padding">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title gs-reveal">Get In Touch</h2>
-                    <p class="section-subtitle gs-reveal">Ready to grow your business? Let's have a chat.</p>
-                </div>
-                <div class="contact-container gs-reveal-up">
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div>
-                                <h5>Call Me</h5>
-                                <p>+91 7339849902</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h5>Email Me</h5>
-                                <p>baderarahul59@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div>
-                                <h5>WhatsApp</h5>
-                                <p>+91 7339849902</p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 40px;">
-                            <a href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20your%20Performance%20Marketing%20services.%20Can%20we%20discuss?"
-                                class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
-                                Get a Free Consultation
-                            </a>
-                        </div>
-                    </div>
+        // HERO ANIMATIONS
+        const tl = gsap.timeline();
+        tl.from(".hero-content .role", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" })
+            .from(".hero-content h1", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-content p", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-btns", { y: 20, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
+            .from(".hero-image", { x: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=1");
 
-                    <div class="contact-form">
-                        <form action="https://formspree.io/f/mzdvnkeo" method="POST" id="leadForm">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <select name="interest" class="form-control" required>
-                                    <option value="" disabled selected>Interested In</option>
-                                    <option value="Google Ads">Google Ads</option>
-                                    <option value="Meta Ads">Meta Ads</option>
-                                    <option value="Website Development">Website Development</option>
-                                    <option value="Landing Page Design">Landing Page Design</option>
-                                    <option value="Ads + Website">Both (Ads + Website)</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" class="form-control" rows="4"
-                                    placeholder="Message / Business Details"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-white py-16 px-6 font-sans">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        // SCROLL REVEAL ANIMATIONS
+        gsap.utils.toArray('.gs-reveal').forEach(element => {
+            gsap.from(element, {
+                scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none reverse" },
+                y: 50, opacity: 0, duration: 1, ease: "power3.out"
+            });
+        });
 
-                <div class="md:w-1/2">
-                    <img src="images/ds image.jpg" alt="Data Science Learning"
-                        class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500 w-full h-auto block"
-                        style="min-height: 250px; object-fit: cover;">
-                </div>
+        // Staggered Skills
+        gsap.from(".skill-item", {
+            scrollTrigger: { trigger: ".skills-grid", start: "top 85%" },
+            y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: "back.out(1.7)"
+        });
 
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-blue-600 pl-4">Learning Data
-                        Science
-                    </h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        I am currently diving deep into the world of <b>Data Science</b>. I am learning how to transform
-                        raw
-                        data into meaningful insights using Statistics, Machine Learning, and Big Data tools to help
-                        businesses make smarter decisions.
-                    </p>
+        // Stats Counter
+        const stats = document.querySelectorAll('.stat-number');
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            gsap.to(stat, {
+                scrollTrigger: { trigger: stat, start: "top 85%" },
+                innerHTML: target, duration: 2, snap: { innerHTML: 1 },
+                onUpdate: function () { this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerHTML) + "+"; }
+            });
+        });
 
-                    <div class="grid grid-cols-3 gap-6">
-                        <div class="flex flex-col items-center">
-                            <i class="devicon-python-plain colored text-5xl"></i>
-                            <span class="text-xs font-bold mt-2">Python</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <i class="devicon-pandas-plain colored text-5xl"></i>
-                            <span class="text-xs font-bold mt-2">Pandas</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <i class="devicon-numpy-original colored text-5xl"></i>
-                            <span class="text-xs font-2 mt-2">NumPy</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <i class="devicon-jupyter-plain colored text-5xl"></i>
-                            <span class="text-xs font-bold mt-2">Jupyter</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fas fa-brain text-5xl text-purple-600"></i>
-                            <span class="text-xs font-bold mt-2">AI/ML</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fas fa-chart-bar text-5xl text-blue-500"></i>
-                            <span class="text-xs font-bold mt-2">Viz</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        // 🔥 FIXED FORM HANDLING (AJAX Submission to Formspree)
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Stop page reload
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            const formData = new FormData(this);
 
-        <section class="bg-gray-900 text-white py-16 px-6 font-sans">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-blue-500 w-fit mx-auto pb-2">Technical
-                    Skills & Expertise</h2>
+            // Change button to loading state
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
 
-                    <div
-                        class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-blue-400 flex items-center">
-                            <i class="fas fa-ad mr-2"></i> Advertising Platforms
-                        </h3>
-                        <div class="flex flex-wrap gap-4">
-                            <div class="flex flex-col items-center"><i
-                                    class="fab fa-google text-4xl text-blue-500"></i><span class="text-xs mt-1">Google
-                                    Ads</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="fab fa-facebook text-4xl text-blue-600"></i><span class="text-xs mt-1">Meta
-                                    Ads</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="fab fa-instagram text-4xl text-pink-500"></i><span
-                                    class="text-xs mt-1">Instagram</span></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center">
-                            <i class="fas fa-code mr-2"></i> Web & Backend
-                        </h3>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-html5-plain colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">HTML5</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-css3-plain colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">CSS3</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-react-original colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">React</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-python-plain colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">Python</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-nodejs-plain colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">Node.js</span></div>
-                            <div class="flex flex-col items-center"><i
-                                    class="devicon-mongodb-plain colored text-3xl"></i><span
-                                    class="text-[10px] mt-1 text-gray-400">MongoDB</span></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-yellow-400 flex items-center">
-                            <i class="fas fa-chart-line mr-2"></i> Analytics & SEO
-                        </h3>
-                        <ul class="text-gray-300 space-y-2 text-sm">
-                            <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Analytics (GA4)</li>
-                            <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Search Console</li>
-                            <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Conversion Tracking</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">Rahul<span class="text-accent">.Ads</span></div>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="copyright">
-                    &copy; 2026 Rahul Badera. All Rights Reserved.
-                </div>
-            </div>
-        </footer>
-
-        <!-- Scripts -->
-        <script>
-            // Register ScrollTrigger
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Mobile Menu Toggle
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-
-            menuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                const icon = menuBtn.querySelector('i');
-                if (navLinks.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
+                if (response.ok) {
+                    // Success State
+                    btn.style.backgroundColor = '#28a745';
+                    btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    this.reset();
                 } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    throw new Error('Submission failed');
                 }
-            });
+            } catch (error) {
+                // Error State
+                btn.style.backgroundColor = '#dc3545';
+                btn.innerHTML = 'Error! Try Again';
+            } finally {
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.style.backgroundColor = '';
+                    btn.innerHTML = originalText;
+                }, 3000);
+            }
+        });
+    </script>
+    <a href="https://wa.me/917339849902" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-            // Close menu when link is clicked
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuBtn.querySelector('i').classList.remove('fa-times');
-                    menuBtn.querySelector('i').classList.add('fa-bars');
-                });
-            });
 
-            // HERO ANIMATIONS
-            const tl = gsap.timeline();
-            tl.from(".hero-content .role", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" })
-                .from(".hero-content h1", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-                .from(".hero-content p", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-                .from(".hero-btns", { y: 20, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
-                .from(".hero-image", { x: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=1");
 
-            // SCROLL REVEAL ANIMATIONS
-            gsap.utils.toArray('.gs-reveal').forEach(element => {
-                gsap.from(element, {
-                    scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none reverse" },
-                    y: 50, opacity: 0, duration: 1, ease: "power3.out"
-                });
-            });
-
-            // Staggered Skills
-            gsap.from(".skill-item", {
-                scrollTrigger: { trigger: ".skills-grid", start: "top 85%" },
-                y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: "back.out(1.7)"
-            });
-
-            // Stats Counter
-            const stats = document.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-count'));
-                gsap.to(stat, {
-                    scrollTrigger: { trigger: stat, start: "top 85%" },
-                    innerHTML: target, duration: 2, snap: { innerHTML: 1 },
-                    onUpdate: function () { this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerHTML) + "+"; }
-                });
-            });
-
-            // 🔥 FIXED FORM HANDLING (AJAX Submission to Formspree)
-            document.getElementById('leadForm').addEventListener('submit', async function (e) {
-                e.preventDefault(); // Stop page reload
-                const btn = this.querySelector('button');
-                const originalText = btn.innerHTML;
-                const formData = new FormData(this);
-
-                // Change button to loading state
-                btn.disabled = true;
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-                try {
-                    const response = await fetch(this.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
-
-                    if (response.ok) {
-                        // Success State
-                        btn.style.backgroundColor = '#28a745';
-                        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                        this.reset();
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                } catch (error) {
-                    // Error State
-                    btn.style.backgroundColor = '#dc3545';
-                    btn.innerHTML = 'Error! Try Again';
-                } finally {
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        btn.style.backgroundColor = '';
-                        btn.innerHTML = originalText;
-                    }, 3000);
-                }
-            });
-        </script>
 </body>
 
 </html>
