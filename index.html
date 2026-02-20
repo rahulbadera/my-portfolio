@@ -871,6 +871,205 @@
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
+
+        /* ===== Parallax Special Offer Section ===== */
+
+        .special-offer {
+            position: relative;
+            padding: 120px 20px;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+        }
+
+        /* Parallax Background Layer */
+        .special-offer::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 140%;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.25), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 128, 0.2), transparent 40%);
+            z-index: 0;
+            transform: translateY(0);
+            transition: transform 0.2s ease-out;
+        }
+
+        /* Content above background */
+        .special-offer>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== Premium Animated Offer Cards ===== */
+
+        .offer-box {
+            padding: 30px;
+            border-radius: 18px;
+            color: #fff;
+            transition: all 0.4s ease;
+            transform: translateY(0);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Different gradient colors */
+        .offer-box:nth-child(1) {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+
+        .offer-box:nth-child(2) {
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        .offer-box:nth-child(3) {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+
+        .offer-box:nth-child(4) {
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+        }
+
+        /* Hover Effect */
+        .offer-box:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shine animation */
+        .offer-box::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(25deg);
+            transition: 0.6s;
+        }
+
+        .offer-box:hover::before {
+            top: 100%;
+            left: 100%;
+        }
+
+        .offer-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .offer-cta {
+            margin-top: 40px;
+        }
+
+        .offer-cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #c2185b;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .offer-cta a:hover {
+            background: #880e4f;
+        }
+
+        /* ===== Special Offer Badge & Ribbon ===== */
+
+        .offer-badge {
+            display: inline-block;
+            background: #ff4081;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .special-offer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ribbon */
+        .offer-ribbon {
+            position: absolute;
+            top: 20px;
+            left: -40px;
+            background: #c2185b;
+            color: #fff;
+            padding: 10px 60px;
+            font-size: 0.8rem;
+            transform: rotate(-45deg);
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== Offer Icons Styling ===== */
+
+        .offer-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+
+        /* Floating animation */
+        @keyframes floatIcon {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* White text inside colorful cards */
+        .offer-box h3,
+        .offer-box p {
+            color: #fff;
+        }
+
+        /* ===== Apple Style Smooth Reveal ===== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(80px) scale(0.95);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     </style>
 </head>
 
@@ -1132,6 +1331,63 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- ===== Women Entrepreneur Special Offer ===== -->
+
+    <section class="special-offer">
+        <div class="offer-ribbon">Women Empowerment Initiative 2026</div>
+        <div class="offer-badge">Limited Time Special Offer</div>
+        <h2>🌸 Special Growth Offer for Indian Women Entrepreneurs</h2>
+
+        <p>
+            To every woman in India building her dream — whether you run a boutique,
+            beauty parlour, kidswear shop, home business, startup, or a growing brand — this is for you.
+        </p>
+
+        <p>
+            You are not just running a business. You are building a legacy.
+            To support your journey, I am launching a Special Empowerment Offer exclusively
+            for Indian Women Entrepreneurs at a highly affordable budget.
+        </p>
+
+        <div class="offer-highlights">
+
+            <div class="offer-box reveal">
+                <i class="fas fa-globe offer-icon"></i>
+                <h3>Affordable Professional Website</h3>
+                <p>Get a modern, mobile-friendly website designed to grow your brand.</p>
+            </div>
+
+            <div class="offer-box reveal">
+                <i class="fas fa-chart-line offer-icon"></i>
+                <h3>Minimum Budget Marketing</h3>
+                <p>Smart performance marketing strategy designed for small & growing businesses.</p>
+            </div>
+
+            <div class="offer-box reveal">
+                <i class="fas fa-bullseye offer-icon"></i>
+                <h3>Growth Consultation</h3>
+                <p>Personal strategy guidance to help scale your business confidently.</p>
+            </div>
+
+            <div class="offer-box reveal">
+                <i class="fas fa-mobile-screen-button offer-icon"></i>
+                <h3>Social Media Boost</h3>
+                <p>Structured guidance to improve online visibility and engagement.</p>
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="offer-cta">
+            <a
+                href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20the%20Special%20Women%20Entrepreneur%20Offer.%20Can%20we%20discuss?">
+                Claim This Special Offer
+            </a>
+        </div>
+
     </section>
 
     <!-- Pricing Section -->
@@ -1547,6 +1803,39 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+
+                    // Stagger delay
+                    const index = Array.from(reveals).indexOf(element);
+                    element.style.transitionDelay = `${index * 150}ms`;
+
+                    element.classList.add("active");
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+    </script>
+    <script>
+        const parallaxSection = document.querySelector(".special-offer");
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            if (parallaxSection) {
+                parallaxSection.style.backgroundPositionY = scrollY * 0.2 + "px";
+            }
+        });
+    </script>
 
 
 </body>
