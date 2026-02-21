@@ -63,11 +63,12 @@
             scroll-behavior: smooth;
         }
 
+        /* ===== Space Background ===== */
+
         body {
-            font-family: 'Outfit', sans-serif;
-            color: var(--primary);
-            background-color: var(--light);
-            line-height: 1.6;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
             overflow-x: hidden;
         }
 
@@ -872,14 +873,19 @@
             }
         }
 
-        /* ===== Parallax Special Offer Section ===== */
+        /* ===== Special Offer Section Fix ===== */
 
         .special-offer {
             position: relative;
             padding: 120px 20px;
             text-align: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+            background: linear-gradient(135deg, #ff5f8f, #ff8fab);
+            color: #ffffff;
+            z-index: 1;
+        }
+
+        .special-offer p {
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Parallax Background Layer */
@@ -1070,10 +1076,135 @@
             opacity: 1;
             transform: translateY(0) scale(1);
         }
+
+        /* ===== Animated Stars ===== */
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+            animation: moveStars 200s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        /* ===== Galaxy Background ===== */
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+            z-index: -1;
+        }
+
+        body {
+            background: transparent;
+        }
+
+        body {
+            color: #ffffff;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ===== Premium Glass Card ===== */
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-title {
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #1e3a8a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #5f6c7b;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            transition: 0.3s ease;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .secondary-btn {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            padding: 14px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 15px;
+        }
     </style>
 </head>
 
 <body>
+    <div id="particles-js"></div>
+    <div class="stars"></div>
 
     <!-- Header -->
     <header>
@@ -1111,15 +1242,19 @@
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="role fade-in-up">Performance Marketing Specialist</span>
-                <h1 class="fade-in-up">Scale Your Business with ROI-Driven Ad Campaigns</h1>
-                <p class="fade-in-up">Expert in Google Ads & Meta Ads. I help local businesses and startups generate
-                    high-quality leads and maximize revenue.</p>
-                <div class="hero-btns fade-in-up">
-                    <a href="tel:+917339849902" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call
-                        Now</a>
-                    <a href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20your%20Performance%20Marketing%20services.%20Can%20we%20discuss?"
-                        class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <div class="hero-badge">
+                    🚀 Performance Marketing Specialist | Google & Meta Certified
+                </div>
+                <h1 class="hero-title">
+                    Turn Ad Spend Into Predictable Revenue.
+                </h1>
+                <p class="hero-subtitle">
+                    I help ambitious brands scale with data-backed Google & Meta campaigns that generate real leads —
+                    not vanity metrics.
+                </p>
+                <div class="hero-buttons">
+                    <a href="tel:+917339849902" class="primary-btn">Book Free Strategy Call</a>
+                    <a href="#" class="secondary-btn">View Case Studies</a>
                 </div>
             </div>
             <div class="hero-image fade-in-up">
@@ -1836,7 +1971,37 @@
             }
         });
     </script>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 120 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 2 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 
 </body>
 
