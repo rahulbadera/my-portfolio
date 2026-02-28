@@ -548,17 +548,17 @@
         }
 
         .service-card {
-            background: #f8fafc;
+            background: #0f172a;
+            color: white;
             padding: 40px;
             border-radius: 20px;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .service-card:hover {
-            background: var(--primary);
-            color: var(--white);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .service-card:hover h3,
@@ -1064,12 +1064,10 @@
 
         /* ===== Apple Style Smooth Reveal ===== */
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(80px) scale(0.95);
-            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: opacity, transform;
+        .gs-reveal,
+        .gs-reveal-up {
+            opacity: 1 !important;
+            transform: none !important;
         }
 
         .reveal.active {
@@ -2000,6 +1998,21 @@
                 }
             },
             "retina_detect": true
+        });
+    </script>
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+
+        window.addEventListener("scroll", () => {
+            reveals.forEach((element) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add("active");
+                }
+            });
         });
     </script>
 
