@@ -1197,6 +1197,204 @@
             font-weight: 600;
             margin-left: 15px;
         }
+
+        .special-offer-v2 {
+            background: #0b0e14;
+            /* Dark Background like Image 1 */
+            padding: 60px 20px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .offer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Pricing Card Styling */
+        .pricing-card {
+            flex: 1;
+            min-width: 300px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            /* Text ko center karne ke liye */
+        }
+
+        /* Price Section Fix */
+        .pricing-card .price {
+            color: #ffffff !important;
+            /* White color jo dark background par dikhega */
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .pricing-card .price span {
+            color: #8899a6;
+            /* /mo ke liye light color */
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Featured (Growth) plan ke price ko blue dikhane ke liye */
+        .pricing-card.featured .price {
+            color: #3b82f6 !important;
+        }
+
+        /* Features List Styling */
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            /* List items left align rahenge professional look ke liye */
+        }
+
+        .plan-features li {
+            margin: 12px 0;
+            font-size: 0.95rem;
+            color: #c9d1d9;
+        }
+
+        .plan-features i {
+            color: #3b82f6;
+            /* Check icon color */
+            margin-right: 10px;
+        }
+
+        /* Right Side Content */
+        .promo-content {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        .mini-badge {
+            background: linear-gradient(90deg, #8a2be2, #00d2ff);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .promo-content h2 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background: #238636;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: 0.3s;
+        }
+
+        /* Mini Grid for Highlights */
+        .mini-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .mini-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .color-1 {
+            background: #f43f5e;
+        }
+
+        /* Pinkish */
+        .color-2 {
+            background: #10b981;
+        }
+
+        /* Green */
+        .color-3 {
+            background: #f59e0b;
+        }
+
+        /* Orange */
+
+        @media (max-width: 768px) {
+            .offer-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Why Choose Me - Dark Mode styling */
+        .bg-dark-custom {
+            background-color: #0b0e14 !important;
+            /* Premium Dark Background */
+            padding: 80px 0;
+        }
+
+        .bg-dark-custom .section-title {
+            color: #ffffff !important;
+            margin-bottom: 50px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .why-item {
+            background: #161b22;
+            /* Card background */
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .why-item:hover {
+            transform: translateY(-5px);
+            border-color: #00d2ff;
+        }
+
+        .why-icon {
+            font-size: 2.5rem;
+            color: #00d2ff;
+            /* Icon color blue */
+        }
+
+        .why-item h4 {
+            color: #ffffff !important;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .why-item .text-secondary {
+            color: #8b949e !important;
+            /* Greyish text for description */
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -1585,7 +1783,7 @@
     </section>
 
     <!-- Why Choose Me -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-dark-custom">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title gs-reveal">Why Choose Me?</h2>
