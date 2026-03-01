@@ -1395,6 +1395,301 @@
             /* Greyish text for description */
             line-height: 1.6;
         }
+
+        /* --- Welcome & Hero Section Fix --- */
+        .welcome-animation,
+        .hero {
+            background: transparent !important;
+            /* Isse piche ka animation dikhega */
+            color: #ffffff;
+        }
+
+        /* Welcome text color fix */
+        .welcome-animation p {
+            color: #94a3b8 !important;
+        }
+
+        /* --- About Section Fix --- */
+        #about {
+            background: transparent !important;
+            /* White background hatane ke liye */
+        }
+
+        #about h2.section-title,
+        #about h3 {
+            color: #ffffff !important;
+        }
+
+        #about .about-text p {
+            color: #cbd5e1 !important;
+        }
+
+        /* --- Numbers Section (Stat Cards) Black/Glass Look --- */
+        .stat-card {
+            /* Glassmorphism look jo animation ke upar accha lagega */
+            background: rgba(22, 27, 34, 0.8) !important;
+            backdrop-filter: blur(10px);
+            /* Piche ka animation thoda blur hoke dikhega, bahut professional lagta hai */
+            border: 1px solid rgba(48, 54, 61, 0.5) !important;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .stat-number {
+            color: #3b82f6 !important;
+            /* Bright blue for numbers */
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            color: #ffffff !important;
+            font-weight: 500;
+        }
+
+        /* Let's Discuss Strategy Button Fix */
+        .btn-outline {
+            border: 2px solid #3b82f6 !important;
+            color: #ffffff !important;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* --- Contact Section Size Fix --- */
+        #contact .container {
+            max-width: 1200px;
+            /* Poore section ki width badhane ke liye */
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            background: rgba(22, 27, 34, 0.7) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            /* Padding badha di hai taaki andar space rahe */
+            display: grid;
+            /* Flex ki jagah Grid use kiya hai better alignment ke liye */
+            grid-template-columns: 1fr 1.5fr;
+            /* Info chhota aur Form bada */
+            gap: 50px;
+            width: 100%;
+            /* Full width cover karne ke liye */
+        }
+
+        /* Form fields ko bada aur saaf dikhane ke liye */
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-control {
+            background: rgba(13, 17, 23, 0.9) !important;
+            border: 1px solid #30363d !important;
+            color: #ffffff !important;
+            padding: 15px 20px;
+            /* Input box ki height badh jayegi */
+            font-size: 1rem;
+            border-radius: 12px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        /* Jab koi field par click kare (Focus) */
+        .contact-form .form-control:focus {
+            border-color: #3b82f6 !important;
+            background: rgba(22, 27, 34, 1) !important;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Mobile responsive banane ke liye */
+        @media (max-width: 991px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                /* Mobile par ek ke niche ek aayenge */
+                padding: 30px;
+            }
+        }
+
+        /* --- Services Section Fix --- */
+        #services {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+
+        #services .container {
+            max-width: 1200px;
+            /* Isse section ki width badh jayegi */
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            /* Cards ko bada karne ke liye */
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: rgba(22, 27, 34, 0.7) !important;
+            /* Transparent Dark */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6 !important;
+            background: rgba(30, 41, 59, 0.9) !important;
+        }
+
+        .service-card h3 {
+            color: #ffffff !important;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #cbd5e1 !important;
+        }
+
+        .service-list li {
+            color: #cbd5e1 !important;
+            list-style: none;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list i {
+            color: #3b82f6 !important;
+            /* Blue check icons */
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- Modern Glass Header Fix --- */
+        header {
+            background: rgba(10, 15, 25, 0.8) !important;
+            /* Dark Transparent */
+            backdrop-filter: blur(15px);
+            /* Blurry background effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Scroll karne par header chhota ho jaye */
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(10, 15, 25, 0.95) !important;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Style */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff !important;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .text-accent {
+            color: #3b82f6 !important;
+            /* Blue color for .Ads */
+            text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Nav Links */
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Hover Effect: Niche line aayegi */
+        .nav-links a:not(.btn):hover {
+            color: #3b82f6 !important;
+        }
+
+        .nav-links a:not(.btn)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #3b82f6;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Call Now Button */
+        .nav-links .btn-primary {
+            background: linear-gradient(90deg, #3b82f6, #2563eb) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            padding: 10px 25px !important;
+        }
+
+        .nav-links .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Welcome Section Polish */
+        .welcome-animation p {
+            color: #94a3b8 !important;
+            /* Thoda bright slate color */
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .welcome-animation h1 {
+            text-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -1462,7 +1757,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-white">
+    <section id="about" class="section-padding">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title gs-reveal">About Me</h2>
@@ -1506,64 +1801,60 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="bg-white py-20 px-6 font-sans">
+    <section class="py-20 px-6 font-sans expertise-section">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 gs-reveal">My Expertise</h2>
-                <p class="text-gray-600 text-lg gs-reveal border-b-2 border-blue-500 w-fit mx-auto pb-2">Tools and
-                    platforms I use to drive results.</p>
+                <h2 class="text-4xl font-bold text-white mb-4 gs-reveal">My Expertise</h2>
+                <p class="text-gray-400 text-lg gs-reveal border-b-2 border-blue-500 w-fit mx-auto pb-2">
+                    Tools and platforms I use to drive results.
+                </p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i class="fab fa-google text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Google Ads</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">Google Ads</div>
                 </div>
 
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i
                         class="fab fa-facebook text-4xl text-blue-600 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Facebook Ads</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">Facebook Ads</div>
                 </div>
 
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i
                         class="fab fa-instagram text-4xl text-pink-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Instagram Ads</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">Instagram Ads</div>
                 </div>
 
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i
                         class="fas fa-chart-line text-4xl text-orange-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">Analytics</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">Analytics</div>
                 </div>
 
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i class="fas fa-tag text-4xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">GTM</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">GTM</div>
                 </div>
 
-                <div
-                    class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 text-center gs-stagger group">
+                <div class="expertise-card gs-stagger group">
                     <i
                         class="fas fa-file-invoice-dollar text-4xl text-green-600 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-sm font-bold text-gray-800 uppercase tracking-wider">ROI Opt.</div>
+                    <div class="text-sm font-bold text-gray-200 uppercase tracking-wider">ROI Opt.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding bg-white">
+    <section id="services" class="section-padding">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title gs-reveal">Services</h2>
-                <p class="section-subtitle gs-reveal">Specialized advertising solutions for your business.</p>
+                <h2 class="section-title gs-reveal" style="color: #ffffff;">Services</h2>
+                <p class="section-subtitle gs-reveal" style="color: #94a3b8;">Specialized advertising solutions for your
+                    business.</p>
             </div>
             <div class="services-grid">
                 <!-- Google Ads -->
@@ -1892,50 +2183,50 @@
             </div>
         </div>
     </section>
-    <section class="bg-white py-16 px-6 font-sans">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section class="section-padding py-16 px-6 font-sans" style="background: transparent;">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 ds-container">
 
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 gs-reveal">
                 <img src="images/ds image.jpg" alt="Data Science Learning"
                     class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500 w-full h-auto block"
-                    style="min-height: 250px; object-fit: cover;">
+                    style="min-height: 250px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1);">
             </div>
 
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-blue-600 pl-4">Learning Data
-                    Science
+            <div class="md:w-1/2 gs-reveal-up">
+                <h2 class="text-3xl font-bold mb-4 border-l-4 border-blue-600 pl-4 text-white">
+                    Learning Data Science
                 </h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    I am currently diving deep into the world of <b>Data Science</b>. I am learning how to transform
-                    raw
+                <p class="mb-6 leading-relaxed text-slate-300">
+                    I am currently diving deep into the world of <b class="text-blue-400">Data Science</b>. I am
+                    learning how to transform raw
                     data into meaningful insights using Statistics, Machine Learning, and Big Data tools to help
                     businesses make smarter decisions.
                 </p>
 
-                <div class="grid grid-cols-3 gap-6">
-                    <div class="flex flex-col items-center">
+                <div class="grid grid-cols-3 gap-6 icon-grid-ds">
+                    <div class="flex flex-col items-center ds-icon-card">
                         <i class="devicon-python-plain colored text-5xl"></i>
-                        <span class="text-xs font-bold mt-2">Python</span>
+                        <span class="text-xs font-bold mt-2 text-white">Python</span>
                     </div>
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center ds-icon-card">
                         <i class="devicon-pandas-plain colored text-5xl"></i>
-                        <span class="text-xs font-bold mt-2">Pandas</span>
+                        <span class="text-xs font-bold mt-2 text-white">Pandas</span>
                     </div>
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center ds-icon-card">
                         <i class="devicon-numpy-original colored text-5xl"></i>
-                        <span class="text-xs font-2 mt-2">NumPy</span>
+                        <span class="text-xs font-bold mt-2 text-white">NumPy</span>
                     </div>
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center ds-icon-card">
                         <i class="devicon-jupyter-plain colored text-5xl"></i>
-                        <span class="text-xs font-bold mt-2">Jupyter</span>
+                        <span class="text-xs font-bold mt-2 text-white">Jupyter</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <i class="fas fa-brain text-5xl text-purple-600"></i>
-                        <span class="text-xs font-bold mt-2">AI/ML</span>
+                    <div class="flex flex-col items-center ds-icon-card">
+                        <i class="fas fa-brain text-5xl text-purple-400"></i>
+                        <span class="text-xs font-bold mt-2 text-white">AI/ML</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <i class="fas fa-chart-bar text-5xl text-blue-500"></i>
-                        <span class="text-xs font-bold mt-2">Viz</span>
+                    <div class="flex flex-col items-center ds-icon-card">
+                        <i class="fas fa-chart-bar text-5xl text-blue-400"></i>
+                        <span class="text-xs font-bold mt-2 text-white">Viz</span>
                     </div>
                 </div>
             </div>
@@ -2199,8 +2490,8 @@
         });
     </script>
     <script>
+        // 1. Scroll Reveal Animation (Jo pehle se tha)
         const reveals = document.querySelectorAll(".reveal");
-
         window.addEventListener("scroll", () => {
             reveals.forEach((element) => {
                 const windowHeight = window.innerHeight;
@@ -2212,8 +2503,17 @@
                 }
             });
         });
-    </script>
 
+        // 2. Header Color Change (Naya logic jo maine bataya)
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 
 </html>
