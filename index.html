@@ -1690,6 +1690,188 @@
                 transform: translateY(0);
             }
         }
+
+        /* --- Women Entrepreneur Section Premium Dark --- */
+        .special-offer {
+            background: transparent !important;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .offer-badge-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .offer-ribbon,
+        .offer-badge {
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .offer-ribbon {
+            background: rgba(236, 72, 153, 0.15);
+            color: #ec4899;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+
+        .offer-badge {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .offer-description {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .offer-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .offer-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 35px 25px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .offer-box:hover {
+            background: rgba(236, 72, 153, 0.05);
+            border-color: #ec4899;
+            transform: translateY(-10px);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ec4899, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .btn-glow {
+            background: linear-gradient(90deg, #ec4899, #3b82f6);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .offer-badge-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* --- Technical Skills & Footer Premium Dark --- */
+        .skill-card {
+            background: rgba(22, 27, 34, 0.7) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #3b82f6 !important;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .skill-icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 12px;
+            width: 80px;
+            transition: 0.3s;
+        }
+
+        .skill-icon-box.small {
+            padding: 10px;
+            width: auto;
+        }
+
+        .skill-icon-box:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Glass Footer */
+        .glass-footer {
+            background: rgba(10, 15, 25, 0.9) !important;
+            backdrop-filter: blur(15px);
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 100px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border-radius: 50%;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #3b82f6;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 
@@ -1957,59 +2139,57 @@
 
     <!-- ===== Women Entrepreneur Special Offer ===== -->
 
-    <section class="special-offer">
-        <div class="offer-ribbon">Women Empowerment Initiative 2026</div>
-        <div class="offer-badge">Limited Time Special Offer</div>
-        <h2>🌸 Special Growth Offer for Indian Women Entrepreneurs</h2>
-
-        <p>
-            To every woman in India building her dream — whether you run a boutique,
-            beauty parlour, kidswear shop, home business, startup, or a growing brand — this is for you.
-        </p>
-
-        <p>
-            You are not just running a business. You are building a legacy.
-            To support your journey, I am launching a Special Empowerment Offer exclusively
-            for Indian Women Entrepreneurs at a highly affordable budget.
-        </p>
-
-        <div class="offer-highlights">
-
-            <div class="offer-box reveal">
-                <i class="fas fa-globe offer-icon"></i>
-                <h3>Affordable Professional Website</h3>
-                <p>Get a modern, mobile-friendly website designed to grow your brand.</p>
+    <section id="special-offer" class="special-offer section-padding">
+        <div class="container">
+            <div class="offer-badge-wrapper">
+                <span class="offer-ribbon">Women Empowerment 2026</span>
+                <span class="offer-badge">Limited Time Offer</span>
             </div>
 
-            <div class="offer-box reveal">
-                <i class="fas fa-chart-line offer-icon"></i>
-                <h3>Minimum Budget Marketing</h3>
-                <p>Smart performance marketing strategy designed for small & growing businesses.</p>
+            <h2 class="section-title">🌸 Special Growth Offer for <span class="text-gradient">Indian Women
+                    Entrepreneurs</span></h2>
+
+            <div class="offer-description">
+                <p>To every woman in India building her dream — whether you run a boutique, beauty parlour, kidswear
+                    shop, or a startup — <b>this is for you.</b></p>
+                <p>You are building a legacy. To support your journey, I am launching a Special Empowerment Offer at a
+                    <span class="highlight-text">highly affordable budget</span>.
+                </p>
             </div>
 
-            <div class="offer-box reveal">
-                <i class="fas fa-bullseye offer-icon"></i>
-                <h3>Growth Consultation</h3>
-                <p>Personal strategy guidance to help scale your business confidently.</p>
+            <div class="offer-highlights-grid">
+                <div class="offer-box reveal">
+                    <div class="icon-circle"><i class="fas fa-globe"></i></div>
+                    <h3>Affordable Website</h3>
+                    <p>Modern, mobile-friendly design to grow your brand.</p>
+                </div>
+
+                <div class="offer-box reveal">
+                    <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+                    <h3>Small Budget Marketing</h3>
+                    <p>Smart strategies designed for growing businesses.</p>
+                </div>
+
+                <div class="offer-box reveal">
+                    <div class="icon-circle"><i class="fas fa-bullseye"></i></div>
+                    <h3>Growth Consultation</h3>
+                    <p>Personal guidance to help scale your business confidently.</p>
+                </div>
+
+                <div class="offer-box reveal">
+                    <div class="icon-circle"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Social Media Boost</h3>
+                    <p>Improve your online visibility and engagement.</p>
+                </div>
             </div>
 
-            <div class="offer-box reveal">
-                <i class="fas fa-mobile-screen-button offer-icon"></i>
-                <h3>Social Media Boost</h3>
-                <p>Structured guidance to improve online visibility and engagement.</p>
+            <div class="offer-cta">
+                <a
+                    href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20the%20Special%20Women%20Entrepreneur%20Offer.%20Can%20we%20discuss?">
+                    Claim This Special Offer
+                </a>
             </div>
-
         </div>
-
-        </div>
-
-        <div class="offer-cta">
-            <a
-                href="https://wa.me/917339849902?text=Hi%20Rahul,%20I%20am%20interested%20in%20the%20Special%20Women%20Entrepreneur%20Offer.%20Can%20we%20discuss?">
-                Claim This Special Offer
-            </a>
-        </div>
-
     </section>
 
     <!-- Pricing Section -->
@@ -2233,66 +2413,80 @@
         </div>
     </section>
 
-    <section class="bg-gray-900 text-white py-16 px-6 font-sans">
+    <section id="tech-skills" class="section-padding" style="background: transparent;">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-blue-500 w-fit mx-auto pb-2">Technical
-                Skills & Expertise</h2>
+            <h2 class="section-title text-center mb-12 border-b-4 border-blue-500 w-fit mx-auto pb-2 text-white">
+                Technical Skills & Expertise
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div
-                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-400 flex items-center">
+                <div class="skill-card reveal">
+                    <h3 class="text-xl font-semibold mb-6 text-blue-400 flex items-center">
                         <i class="fas fa-ad mr-2"></i> Advertising Platforms
                     </h3>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex flex-col items-center"><i
-                                class="fab fa-google text-4xl text-blue-500"></i><span class="text-xs mt-1">Google
-                                Ads</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="fab fa-facebook text-4xl text-blue-600"></i><span class="text-xs mt-1">Meta
-                                Ads</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="fab fa-instagram text-4xl text-pink-500"></i><span
-                                class="text-xs mt-1">Instagram</span></div>
+                    <div class="flex flex-wrap gap-6 justify-center">
+                        <div class="skill-icon-box">
+                            <i class="fab fa-google text-4xl text-blue-500"></i>
+                            <span class="text-xs mt-2 text-gray-300">Google Ads</span>
+                        </div>
+                        <div class="skill-icon-box">
+                            <i class="fab fa-facebook text-4xl text-blue-600"></i>
+                            <span class="text-xs mt-2 text-gray-300">Meta Ads</span>
+                        </div>
+                        <div class="skill-icon-box">
+                            <i class="fab fa-instagram text-4xl text-pink-500"></i>
+                            <span class="text-xs mt-2 text-gray-300">Instagram</span>
+                        </div>
                     </div>
                 </div>
 
-                <div
-                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center">
+                <div class="skill-card reveal">
+                    <h3 class="text-xl font-semibold mb-6 text-green-400 flex items-center">
                         <i class="fas fa-code mr-2"></i> Web & Backend
                     </h3>
                     <div class="grid grid-cols-3 gap-4">
-                        <div class="flex flex-col items-center"><i
-                                class="devicon-html5-plain colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">HTML5</span></div>
-                        <div class="flex flex-col items-center"><i class="devicon-css3-plain colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">CSS3</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="devicon-react-original colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">React</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="devicon-python-plain colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">Python</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="devicon-nodejs-plain colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">Node.js</span></div>
-                        <div class="flex flex-col items-center"><i
-                                class="devicon-mongodb-plain colored text-3xl"></i><span
-                                class="text-[10px] mt-1 text-gray-400">MongoDB</span></div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-html5-plain colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">HTML5</span>
+                        </div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-css3-plain colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">CSS3</span>
+                        </div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-react-original colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">React</span>
+                        </div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-python-plain colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">Python</span>
+                        </div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-nodejs-plain colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">Node.js</span>
+                        </div>
+                        <div class="skill-icon-box small">
+                            <i class="devicon-mongodb-plain colored text-3xl"></i>
+                            <span class="text-[10px] mt-1 text-gray-400">MongoDB</span>
+                        </div>
                     </div>
                 </div>
 
-                <div
-                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-yellow-400 flex items-center">
+                <div class="skill-card reveal">
+                    <h3 class="text-xl font-semibold mb-6 text-yellow-400 flex items-center">
                         <i class="fas fa-chart-line mr-2"></i> Analytics & SEO
                     </h3>
-                    <ul class="text-gray-300 space-y-2 text-sm">
-                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Analytics (GA4)</li>
-                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Google Search Console</li>
-                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Conversion Tracking</li>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300 text-sm">
+                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i> Google Analytics (GA4)
+                        </li>
+                        <li class="flex items-center text-gray-300 text-sm">
+                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i> Google Search Console
+                        </li>
+                        <li class="flex items-center text-gray-300 text-sm">
+                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i> Conversion Tracking
+                        </li>
                     </ul>
                 </div>
 
@@ -2300,18 +2494,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer class="glass-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Rahul<span class="text-accent">.Ads</span></div>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="copyright text-gray-500">
                 &copy; 2026 Rahul Badera. All Rights Reserved.
             </div>
         </div>
