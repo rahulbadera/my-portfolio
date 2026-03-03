@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Portfolio of Rahul Badera - Performance Marketing & Digital Ads Specialist. Expert in Google Ads and Meta Ads.">
-    <title>Rahul Badera | Performance Marketing Specialist</title>
+    <title>The Brand Spire | Performance Marketing Agency</title>
     <meta name="keywords"
         content="Rahul Badera, Performance Marketing, Google Ads Expert, Meta Ads Specialist, Digital Marketing Rahul">
     <meta name="author" content="Rahul Badera">
 
-    <meta property="og:title" content="Rahul Badera | Performance Marketing Specialist">
+    <meta name="description"
+        content="The Brand Spire | Leading Performance Marketing Agency. We scale businesses with ROI-driven Google & Meta Ads strategies. Turn your ad spend into predictable revenue.">
     <meta property="og:description" content="Scale your business with ROI-driven ad campaigns.">
     <meta property="og:url" content="https://rahulbadera.vercel.app">
     <meta property="og:type" content="website">
@@ -20,7 +21,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1607,18 +1608,44 @@
         }
 
         /* Logo Style */
-        .logo {
-            font-size: 1.5rem;
+        /* --- The Brand Spire Professional Logo --- */
+        .logo,
+        .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
             font-weight: 800;
+            letter-spacing: -0.5px;
             color: #ffffff !important;
             text-decoration: none;
-            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
         .text-accent {
-            color: #3b82f6 !important;
-            /* Blue color for .Ads */
-            text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .logo:hover .text-accent {
+            filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.5));
+            transition: 0.3s ease;
+        }
+
+        /* Mobile Fix: Ise thik yahan niche add karein */
+        @media (max-width: 480px) {
+
+            .logo,
+            .footer-logo {
+                font-size: 1.3rem;
+                /* Mobile par logo ka size adjust ho jayega */
+            }
+        }
+
+        /* Footer Copyright Update */
+        .copyright {
+            color: #64748b !important;
+            font-family: 'Outfit', sans-serif;
         }
 
         /* Nav Links */
@@ -1922,7 +1949,7 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">Rahul<span class="text-accent">.Ads</span></a>
+            <a href="#" class="logo">The <span class="text-accent">Brand Spire</span></a>
             <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             <nav class="nav-links">
                 <a href="#home">Home</a>
@@ -2537,7 +2564,7 @@
     <footer class="glass-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Rahul<span class="text-accent">.Ads</span></div>
+                <div class="footer-logo">The <span class="text-accent">Brand Spire</span></div>
                 <div class="footer-social">
                     <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -2545,7 +2572,7 @@
                 </div>
             </div>
             <div class="copyright text-gray-500">
-                &copy; 2026 Rahul Badera. All Rights Reserved.
+                &copy; 2026 The Brand Spire. Crafted by Rahul Badera.
             </div>
         </div>
     </footer>
